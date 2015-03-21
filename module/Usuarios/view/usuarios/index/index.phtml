@@ -1,0 +1,183 @@
+<?php $usuario = $this->usuario; extract($usuario); ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0047)http://dolibar.smateocu.ovh/user/fiche.php?id=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="author" content="Dolibarr Development Team">
+<link rel="shortcut icon" type="image/x-icon" href="http://dolibar.smateocu.ovh/theme/eldy/img/favicon.ico">
+<link rel="top" title="Inicio" href="http://dolibar.smateocu.ovh/">
+<link rel="copyright" title="GNU General Public License" href="http://www.gnu.org/copyleft/gpl.html#SEC1">
+<link rel="author" title="Dolibarr Development Team" href="http://www.dolibarr.org/">
+<title>Dolibarr - Ficha usuario</title>
+<!-- Includes CSS for JQuery (Ajax library) -->
+<link rel="stylesheet" type="text/css" href="/index_files/jquery-ui-latest.custom.css">
+<link rel="stylesheet" type="text/css" href="/index_files/tipTip.css">
+<link rel="stylesheet" type="text/css" href="/index_files/jquery.jnotify-alt.min.css">
+<!-- Includes CSS for Dolibarr theme -->
+<link rel="stylesheet" type="text/css" title="default" href="/index_files/style.css">
+<!-- Includes JS for JQuery -->
+<script type="text/javascript" src="/index_files/jquery-latest.min.js"></script>
+<script type="text/javascript" src="/index_files/jquery-ui-latest.custom.min.js"></script>
+<script type="text/javascript" src="/index_files/jquery.tablednd.0.6.min.js"></script>
+<script type="text/javascript" src="/index_files/jquery.tipTip.min.js"></script>
+<script type="text/javascript" src="/index_files/jquery.jnotify.min.js"></script>
+<script type="text/javascript" src="/index_files/jnotify.js"></script>
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="/includes/jquery/plugins/flot/excanvas.min.js"></script><![endif]-->
+<script type="text/javascript" src="/index_files/jquery.flot.min.js"></script>
+<script type="text/javascript" src="/index_files/jquery.flot.pie.min.js"></script>
+<script type="text/javascript" src="/index_files/jquery.flot.stack.min.js"></script>
+<!-- Includes JS for CKEditor -->
+<script type="text/javascript">var CKEDITOR_BASEPATH = '/includes/ckeditor/';
+var ckeditorConfig = '/theme/eldy/ckeditor/config.js';
+var ckeditorFilebrowserBrowseUrl = '/core/filemanagerdol/browser/default/browser.php?Connector=/core/filemanagerdol/connectors/php/connector.php';
+var ckeditorFilebrowserImageBrowseUrl = '/core/filemanagerdol/browser/default/browser.php?Type=Image&Connector=/core/filemanagerdol/connectors/php/connector.php';
+</script>
+<script type="text/javascript" src="/index_files/ckeditor.js"></script><style>.cke{visibility:hidden;}</style>
+<!-- Includes JS of Dolibarr -->
+<script type="text/javascript" src="/index_files/lib_head.js"></script>
+<script type="text/javascript" src="/index_files/datepicker.js"></script>
+</head>
+
+<body id="mainbody">
+<script type="text/javascript">
+                    jQuery(document).ready(function () {
+                    	jQuery(function() {
+                        	jQuery(".classfortooltip").tipTip({maxWidth: "600px", edgeOffset: 10, delay: 50, fadeIn: 50, fadeOut: 50});
+                        });
+                    });
+                </script>
+<!-- Start top horizontal -->
+<div id="tmenu_tooltip" class="tmenu">
+<div class="tmenudiv"><ul class="tmenu"><li class="tmenusel" id="mainmenutd_home"><div class="tmenuleft"></div><div class="tmenucenter"><a class="tmenuimage" href="http://dolibar.smateocu.ovh/index.php?mainmenu=home&leftmenu="><div class="mainmenu home"><span class="mainmenu tmenuimage" id="mainmenuspan_home"></span></div></a><a class="tmenusel" id="mainmenua_home" href="http://dolibar.smateocu.ovh/index.php?mainmenu=home&leftmenu="><span class="mainmenuaspan">Inicio</span></a></div></li>
+<li class="tmenu" id="mainmenutd_companies"><div class="tmenuleft"></div><div class="tmenucenter"><a class="tmenuimage" href="http://dolibar.smateocu.ovh/societe/index.php?mainmenu=companies&leftmenu="><div class="mainmenu companies"><span class="mainmenu tmenuimage" id="mainmenuspan_companies"></span></div></a><a class="tmenu" id="mainmenua_companies" href="http://dolibar.smateocu.ovh/societe/index.php?mainmenu=companies&leftmenu="><span class="mainmenuaspan">Terceros</span></a></div></li>
+<li class="tmenu" id="mainmenutd_products"><div class="tmenuleft"></div><div class="tmenucenter"><a class="tmenuimage" href="http://dolibar.smateocu.ovh/product/index.php?mainmenu=products&leftmenu="><div class="mainmenu products"><span class="mainmenu tmenuimage" id="mainmenuspan_products"></span></div></a><a class="tmenu" id="mainmenua_products" href="http://dolibar.smateocu.ovh/product/index.php?mainmenu=products&leftmenu="><span class="mainmenuaspan">Productos</span></a></div></li>
+<li class="tmenu" id="mainmenutd_commercial"><div class="tmenuleft"></div><div class="tmenucenter"><a class="tmenuimage" href="http://dolibar.smateocu.ovh/comm/index.php?mainmenu=commercial&leftmenu="><div class="mainmenu commercial"><span class="mainmenu tmenuimage" id="mainmenuspan_commercial"></span></div></a><a class="tmenu" id="mainmenua_commercial" href="http://dolibar.smateocu.ovh/comm/index.php?mainmenu=commercial&leftmenu="><span class="mainmenuaspan">Comercial</span></a></div></li>
+<li class="tmenu" id="mainmenutd_accountancy"><div class="tmenuleft"></div><div class="tmenucenter"><a class="tmenuimage" href="http://dolibar.smateocu.ovh/compta/index.php?mainmenu=accountancy&leftmenu="><div class="mainmenu accountancy"><span class="mainmenu tmenuimage" id="mainmenuspan_accountancy"></span></div></a><a class="tmenu" id="mainmenua_accountancy" href="http://dolibar.smateocu.ovh/compta/index.php?mainmenu=accountancy&leftmenu="><span class="mainmenuaspan">Financiera</span></a></div></li>
+<li class="tmenu" id="mainmenutd_bank"><div class="tmenuleft"></div><div class="tmenucenter"><a class="tmenuimage" href="http://dolibar.smateocu.ovh/compta/bank/index.php?mainmenu=bank&leftmenu="><div class="mainmenu bank"><span class="mainmenu tmenuimage" id="mainmenuspan_bank"></span></div></a><a class="tmenu" id="mainmenua_bank" href="http://dolibar.smateocu.ovh/compta/bank/index.php?mainmenu=bank&leftmenu="><span class="mainmenuaspan">Bancos/Cajas</span></a></div></li>
+<li class="tmenu" id="mainmenutd_tools"><div class="tmenuleft"></div><div class="tmenucenter"><a class="tmenuimage" href="http://dolibar.smateocu.ovh/core/tools.php?mainmenu=tools&leftmenu="><div class="mainmenu tools"><span class="mainmenu tmenuimage" id="mainmenuspan_tools"></span></div></a><a class="tmenu" id="mainmenua_tools" href="http://dolibar.smateocu.ovh/core/tools.php?mainmenu=tools&leftmenu="><span class="mainmenuaspan">Utilidades</span></a></div></li>
+<li class="tmenu" id="mainmenutd_shop"><div class="tmenuleft"></div><div class="tmenucenter"><a class="tmenuimage" href="http://dolibar.smateocu.ovh/boutique/index.php?mainmenu=shop&leftmenu="><div class="mainmenu shop"><span class="mainmenu tmenuimage" id="mainmenuspan_shop"></span></div></a><a class="tmenu" id="mainmenua_shop" href="http://dolibar.smateocu.ovh/boutique/index.php?mainmenu=shop&leftmenu="><span class="mainmenuaspan">OSCommerce</span></a></div></li>
+<li class="tmenu" id="mainmenutd_members"><div class="tmenuleft"></div><div class="tmenucenter"><a class="tmenuimage" href="http://dolibar.smateocu.ovh/adherents/index.php?mainmenu=members&leftmenu="><div class="mainmenu members"><span class="mainmenu tmenuimage" id="mainmenuspan_members"></span></div></a><a class="tmenu" id="mainmenua_members" href="http://dolibar.smateocu.ovh/adherents/index.php?mainmenu=members&leftmenu="><span class="mainmenuaspan">Miembros</span></a></div></li>
+<li class="tmenu" id="mainmenutd_ecm"><div class="tmenuleft"></div><div class="tmenucenter"><a class="tmenuimage" href="http://dolibar.smateocu.ovh/ecm/index.php?idmenu=1&mainmenu=ecm&leftmenu="><div class="mainmenu ecm"><span class="mainmenu tmenuimage" id="mainmenuspan_ecm"></span></div></a><a class="tmenu" id="mainmenua_ecm" href="http://dolibar.smateocu.ovh/ecm/index.php?idmenu=1&mainmenu=ecm&leftmenu="><span class="mainmenuaspan">Documentos</span></a></div></li>
+<li class="tmenu" id="mainmenutd_externalsite"><div class="tmenuleft"></div><div class="tmenucenter"><a class="tmenuimage" href="http://dolibar.smateocu.ovh/externalsite/frames.php?idmenu=9&mainmenu=externalsite&leftmenu="><div class="mainmenu externalsite"><span class="mainmenu tmenuimage" id="mainmenuspan_externalsite"></span></div></a><a class="tmenu" id="mainmenua_externalsite" href="http://dolibar.smateocu.ovh/externalsite/frames.php?idmenu=9&mainmenu=externalsite&leftmenu="><span class="mainmenuaspan">Web</span></a></div></li>
+<li class="tmenu" id="mainmenutd_ftp"><div class="tmenuleft"></div><div class="tmenucenter"><a class="tmenuimage" href="http://dolibar.smateocu.ovh/ftp/index.php?idmenu=10&mainmenu=ftp&leftmenu="><div class="mainmenu ftp"><span class="mainmenu tmenuimage" id="mainmenuspan_ftp"></span></div></a><a class="tmenu" id="mainmenua_ftp" href="http://dolibar.smateocu.ovh/ftp/index.php?idmenu=10&mainmenu=ftp&leftmenu="><span class="mainmenuaspan">FTP</span></a></div></li>
+<li class="tmenu" id="mainmenutd_agenda"><div class="tmenuleft"></div><div class="tmenucenter"><a class="tmenuimage" href="http://dolibar.smateocu.ovh/comm/action/index.php?idmenu=11&mainmenu=agenda&leftmenu="><div class="mainmenu agenda"><span class="mainmenu tmenuimage" id="mainmenuspan_agenda"></span></div></a><a class="tmenu" id="mainmenua_agenda" href="http://dolibar.smateocu.ovh/comm/action/index.php?idmenu=11&mainmenu=agenda&leftmenu="><span class="mainmenuaspan">Agenda</span></a></div></li>
+<li class="tmenuend" id="mainmenutd_"><div class="tmenuleft"></div><div class="tmenucenter"></div></li>
+</ul></div>
+</div>
+<div class="login_block">
+<div class="login_block_user"><div class="classfortooltip login_block_elem2" valign="top" width="14"><div class="login"><a href="/index_files/index.html"></a></div></div></div><div class="login_block_other"><div class="classfortooltip login_block_elem" valign="top" width="14"><a href="http://dolibar.smateocu.ovh/user/logout.php"><img src="/index_files/logout.png" border="0" alt="Desconexión" class="login"></a></div><div class="classfortooltip login_block_elem" valign="top" width="14"><a href="http://dolibar.smateocu.ovh/user/fiche.php?id=1&optioncss=print" target="_blank"><img src="/index_files/printer.png" border="0" alt="" title="" class="printer"></a></div></div></div>
+<div style="clear: both;"></div><!-- End top horizontal menu -->
+
+<div id="id-container"><div id="id-left"> <!-- Begin id-left -->
+<!-- Begin left menu -->
+<div class="vmenu">
+
+<div class="blockvmenupair">
+<!-- Process menu entry with mainmenu=home, leftmenu=setup, level=0 enabled=1 -->
+<div class="menu_titre"><a class="vmenu" href="http://dolibar.smateocu.ovh/admin/index.php?mainmenu=home&leftmenu=setup">Configuración</a></div>
+<div class="menu_top"></div>
+<div class="menu_end"></div>
+</div>
+<div class="blockvmenuimpair">
+<!-- Process menu entry with mainmenu=home, leftmenu=admintools, level=0 enabled=1 -->
+<div class="menu_titre"><a class="vmenu" href="http://dolibar.smateocu.ovh/admin/tools/index.php?mainmenu=home&leftmenu=admintools">Utilidades sistema</a></div>
+<div class="menu_top"></div>
+<div class="menu_end"></div>
+</div>
+<div class="blockvmenupair">
+<!-- Process menu entry with mainmenu=home, leftmenu=modulesadmintools, level=0 enabled=1 -->
+<div class="menu_titre"><a class="vmenu" href="http://dolibar.smateocu.ovh/admin/tools/index.php?mainmenu=home&leftmenu=modulesadmintools">Utilidades módulos</a></div>
+<div class="menu_top"></div>
+<div class="menu_end"></div>
+</div>
+<div class="blockvmenuimpair">
+<!-- Process menu entry with mainmenu=home, leftmenu=users, level=0 enabled=1 -->
+<div class="menu_titre"><a class="vmenu" href="http://dolibar.smateocu.ovh/user/home.php?leftmenu=users">Usuarios y grupos</a></div>
+<div class="menu_top"></div>
+<!-- Process menu entry with mainmenu=, leftmenu=, level=1 enabled=1 -->
+<div class="menu_contenu"><a class="vsmenu" href="http://dolibar.smateocu.ovh/user/index.php">Usuarios</a><br></div>
+<!-- Process menu entry with mainmenu=, leftmenu=, level=2 enabled=1 -->
+<div class="menu_contenu">&nbsp; &nbsp; &nbsp;<a class="vsmenu" href="http://dolibar.smateocu.ovh/user/fiche.php?action=create">Nuevo usuario</a><br></div>
+<!-- Process menu entry with mainmenu=, leftmenu=, level=1 enabled=1 -->
+<div class="menu_contenu"><a class="vsmenu" href="http://dolibar.smateocu.ovh/user/group/index.php">Grupos</a><br></div>
+<!-- Process menu entry with mainmenu=, leftmenu=, level=2 enabled=1 -->
+<div class="menu_contenu">&nbsp; &nbsp; &nbsp;<a class="vsmenu" href="http://dolibar.smateocu.ovh/user/group/fiche.php?action=create">Nuevo grupo</a><br></div>
+<div class="menu_end"></div>
+</div>
+
+<!-- Begin SearchForm -->
+<div id="blockvmenusearch" class="blockvmenusearch">
+<div class="menu_titre"><a class="vsmenu" href="http://dolibar.smateocu.ovh/societe/societe.php"><img src="/index_files/object_company.png" border="0" alt="" title=""> Terceros</a><br></div><form action="http://dolibar.smateocu.ovh/societe/societe.php" method="post"><input type="hidden" name="token" value="fbdad820cfe621212f918c6459ca6c26"><input type="hidden" name="mode" value="search"><input type="hidden" name="mode_search" value="soc"><input type="text" class="flat" title="Búsqueda de Terceros" name="socname" size="10"><input type="submit" class="button" value="Ir"></form>
+<div class="menu_titre"><a class="vsmenu" href="http://dolibar.smateocu.ovh/contact/list.php"><img src="/index_files/object_contact.png" border="0" alt="" title=""> Contactos</a><br></div><form action="http://dolibar.smateocu.ovh/contact/list.php" method="post"><input type="hidden" name="token" value="fbdad820cfe621212f918c6459ca6c26"><input type="hidden" name="mode" value="search"><input type="hidden" name="mode_search" value="contact"><input type="text" class="flat" title="Búsqueda de Contactos" name="contactname" size="10"><input type="submit" class="button" value="Ir"></form>
+<div class="menu_titre"><a class="vsmenu" href="http://dolibar.smateocu.ovh/product/liste.php"><img src="/index_files/object_product.png" border="0" alt="" title=""> Productos/Servicios</a><br></div><form action="http://dolibar.smateocu.ovh/product/liste.php" method="post"><input type="hidden" name="token" value="fbdad820cfe621212f918c6459ca6c26"><input type="hidden" name="mode" value="search"><input type="hidden" name="mode_search" value="products"><input type="text" class="flat" title="Búsqueda de Productos/Servicios" name="sall" size="10"><input type="submit" class="button" value="Ir"></form>
+<div class="menu_titre"><a class="vsmenu" href="http://dolibar.smateocu.ovh/fourn/product/liste.php"><img src="/index_files/object_product.png" border="0" alt="" title=""> Ref. producto proveedor</a><br></div><form action="http://dolibar.smateocu.ovh/fourn/product/liste.php" method="post"><input type="hidden" name="token" value="fbdad820cfe621212f918c6459ca6c26"><input type="hidden" name="mode" value="search"><input type="hidden" name="mode_search" value="products"><input type="text" class="flat" title="Búsqueda de Ref. producto proveedor" name="srefsupplier" size="10"><input type="submit" class="button" value="Ir"></form>
+<div class="menu_titre"><a class="vsmenu" href="http://dolibar.smateocu.ovh/adherents/liste.php"><img src="/index_files/object_user.png" border="0" alt="" title=""> Miembros</a><br></div><form action="http://dolibar.smateocu.ovh/adherents/liste.php" method="post"><input type="hidden" name="token" value="fbdad820cfe621212f918c6459ca6c26"><input type="hidden" name="mode" value="search"><input type="hidden" name="mode_search" value="member"><input type="text" class="flat" title="Búsqueda de Miembros" name="sall" size="10"><input type="submit" class="button" value="Ir"></form>
+</div>
+<!-- End SearchForm -->
+
+<!-- Begin Bookmarks -->
+<div id="blockvmenubookmarks" class="blockvmenubookmarks">
+<div class="menu_titre"><table class="nobordernopadding" width="100%" summary="bookmarkstable"><tbody><tr><td><a class="vmenu" href="http://dolibar.smateocu.ovh/bookmarks/liste.php">Marcadores</a></td><td align="right"><a class="vsmenu" href="http://dolibar.smateocu.ovh/bookmarks/fiche.php?action=create&urlsource=%2Fuser%2Ffiche.php%3Fid%3D1&url=%2Fuser%2Ffiche.php%3Fid%3D1"><img src="/index_files/object_bookmark.png" border="0" alt="Añadir esta página a los marcadores" title="Añadir esta página a los marcadores"></a></td></tr></tbody></table></div><div class="menu_top"></div>
+<div class="menu_end"></div></div>
+<!-- End Bookmarks -->
+<div id="blockvmenuhelp" class="blockvmenuhelp"><a class="help" target="_blank" href="http://www.dolibarr.es/">Dolibarr 3.6.2</a></div>
+</div>
+<!-- End left menu -->
+
+</div> <!-- end id-left -->
+<!-- Begin right area -->
+<div id="id-right">
+<div class="fiche"> <!-- begin div class="fiche" -->
+
+<div class="tabs" data-role="controlgroup" data-type="horizontal">
+<a class="tabTitle"><img src="/index_files/object_user.png" border="0" alt="" title=""> Usuario</a><div class="inline-block tabsElem"><a data-role="button" id="user" class="tabactive tab inline-block" href="/index_files/index.html">Ficha usuario</a>
+</div><div class="inline-block tabsElem"><a data-role="button" id="rights" class="tab inline-block" href="http://dolibar.smateocu.ovh/user/perms.php?id=1">Permisos usuario</a>
+</div><div class="inline-block tabsElem"><a data-role="button" id="guisetup" class="tab inline-block" href="http://dolibar.smateocu.ovh/user/param_ihm.php?id=1">Interfaz usuario</a>
+</div><div class="inline-block tabsElem"><a data-role="button" id="note" class="tab inline-block" href="http://dolibar.smateocu.ovh/user/note.php?id=1">Nota</a>
+</div><div class="inline-block tabsElem"><a data-role="button" id="info" class="tab inline-block" href="http://dolibar.smateocu.ovh/user/info.php?id=1">Log</a>
+</div></div>
+
+<div class="tabBar">
+<table class="border" width="100%"><tbody><tr><td width="25%" valign="top">Ref.</td><td colspan="2">1</td></tr>
+<tr><td valign="top">Apellidos</td><td>SuperAdmin</td><td align="center" valign="middle" width="25%" rowspan="19"><img alt="No photo" border="0" width="100" src="/index_files/nophoto.jpg"></td></tr>
+<tr><td valign="top">Nombre</td><td></td></tr>
+<tr><td valign="top">Puesto/función</td><td></td></tr>
+<tr><td valign="top">Login</td><td><?php echo strtoupper($login); ?></td></tr>
+<tr><td valign="top">Contraseña</td><td>**********</td></tr>
+<tr><td valign="top">Administrador</td><td><table class="nobordernopadding" summary=""><tbody><tr><td style="padding-right: 3px !important;">Sí</td><td class="classfortooltip" valign="top" width="14"><img src="/index_files/star.png" border="0" alt="" title=""></td></tr></tbody></table></td></tr>
+<tr><td valign="top">Tipo</td><td><table class="nobordernopadding" summary=""><tbody><tr><td style="padding-right: 3px !important;">Interno</td><td class="classfortooltip" valign="top" width="14"><img src="/index_files/info.png" border="0" alt="" title="" style="cursor: help"></td></tr></tbody></table></td></tr>
+<tr><td valign="top">Teléf. trabajo</td><td></td></tr>
+<tr><td valign="top">Móvil</td><td>685838246</td></tr>
+<tr><td valign="top">Fax</td><td></td></tr>
+<tr><td valign="top">Skype</td><td>&nbsp;</td></tr>
+<tr><td valign="top">EMail</td><td><a style="text-overflow: ellipsis;" href="mailto:smateocu@gmail.com">smateocu@gmail.com</a></td></tr>
+<tr><td valign="top">Firma</td><td></td></tr>
+<tr><td valign="top">Responsable jerárquico</td><td>Nada</td></tr>
+<tr><td valign="top">Estado</td><td><img src="/index_files/statut4.png" border="0" alt="Activado" title="Activado"> Activado</td></tr>
+<tr><td valign="top">Última conexión</td><td>22/02/2015 18:12</td></tr>
+<tr><td valign="top">Conexión anterior</td><td>21/02/2015 12:17</td></tr>
+<tr><td valign="top">Enlace terceros / contactos</td><td>Este usuario no es ni un cliente potencial, ni un cliente, ni un proveedor</td></tr>
+<tr><td valign="top">Enlace miembro</td><td>Usuario no vinculado a un miembro</td></tr>
+</tbody></table>
+</div>
+<div class="tabsAction"><div class="inline-block divButAction"><a class="butAction" href="http://dolibar.smateocu.ovh/user/fiche.php?id=1&action=edit">Modificar</a></div></div>
+<br>
+
+<table summary="" width="100%" border="0" class="notopnoleftnoright" style="margin-bottom: 2px;"><tbody><tr><td class="nobordernopadding" valign="middle"><div class="titre">Listado de grupos de este usuario</div></td></tr></tbody></table>
+<form action="/index_files/index.html" method="POST">
+<input type="hidden" name="token" value="fbdad820cfe621212f918c6459ca6c26"><input type="hidden" name="action" value="addgroup"><table class="noborder" width="100%">
+<tbody><tr class="liste_titre"><th class="liste_titre" width="25%">Grupos a añadir a este usuario</th>
+<th><select class="flat" name="group" disabled="disabled"><option value="">Nada</option></select> &nbsp; <input type="hidden" name="entity" value="1"><input type="submit" class="button" value="Añadir"></th></tr>
+</tbody></table></form>
+<br><table class="noborder" width="100%"><tbody><tr class="liste_titre"><td class="liste_titre" width="25%">Grupos</td><td>&nbsp;</td></tr>
+<tr class="impair"><td colspan="3">Nada</td></tr></tbody></table><br>
+
+</div> <!-- End div class="fiche" -->
+</div> <!-- End div id-right -->
+
+<!-- Common footer for private page -->
+</div> <!-- End div id-container -->
+
+
+<div id="tiptip_holder" style="max-width: 600px; display: none; margin: 8px 0px 0px 553px;" class="tip_left_bottom"><div id="tiptip_arrow" style="margin-left: 600px; margin-top: -12px;"><div id="tiptip_arrow_inner"></div></div><div id="tiptip_content"><u>Usuario</u><br><b>Nombre</b>: SuperAdmin<br><b>Login</b>: Admin<br><b>Administrador</b>: Sí<br><b>Tipo</b>: Interno<br><b>Dirección IP</b>: 127.0.0.1<br><br><u>Conexión</u><br><b>Conectado desde</b>: 22/02/2015 18:12<br><b>Conexión anterior</b>: 21/02/2015 12:17<br><b>Modo de autentificación</b>: dolibarr<br><b>Tema actual</b>: eldy<br><b>Gestor menú actual</b>: eldy<br><b>Idioma actual</b>: <img src="/index_files/es.png" border="0" alt="es_ES" title="es_ES"> es_ES<br><b>Browser</b>: chrome 40.0.2214.115 (Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36)</div></div></body></html>
